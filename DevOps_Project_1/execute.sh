@@ -1,6 +1,6 @@
 DOCKER_IMAGE="044967670847.dkr.ecr.ap-south-1.amazonaws.com/nginx-application:latest"
 
-aws ecr get-login-password --region ap-south-1 --profile euran_devops_project | docker login --username AWS --password-stdin 044967670847.dkr.ecr.ap-south-1.amazonaws.com
+aws ecr get-login-password --region ap-south-1 | sudo docker login --username AWS --password-stdin "044967670847.dkr.ecr.ap-south-1.amazonaws.com"
 
 docker build -t nginx-application .
 
