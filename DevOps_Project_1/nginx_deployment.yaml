@@ -17,5 +17,12 @@ spec:
       containers:
       - name: nginx
         image: devops_image
+        resources:
+          requests:
+            memory: "200Mi"
+            cpu: "200m"
+          limits:
+            memory: "200Mi"
+            cpu: "200m"        
         ports:
         - containerPort: 80
