@@ -1,1 +1,20 @@
-
+- name: This sets up an httpd webserver
+  hosts: nginx
+  become: yes
+  remote_user: ec2-user
+  gather_facts: true
+  tasks:
+  - name: "Install httpd and php packages"
+    package:
+        name:
+          - "httpd"
+          - "php"
+        state: present
+  - name: "copy code from GitHub"
+    get_url:
+        url: https://github.com/shubhamm45/DevOps-Project/blob/main/DevOps_Project_2/Ansible/index.php
+        dest: "/var/www/html/index.php"
+  - name: "Start httpd services"
+    service:
+        name: httpd
+        state: started
