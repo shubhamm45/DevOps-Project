@@ -18,6 +18,6 @@ resource "aws_instance" "dev_machine" {
   key_name = "euran_devops_project"
 
   tags = {
-    Name = "nginx-machine"
+    Environment = "dev"
   }
 }
