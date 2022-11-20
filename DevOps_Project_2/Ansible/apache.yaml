@@ -1,7 +1,7 @@
 - name: This sets up an httpd webserver
   hosts: nginx
   become: yes
-  remote_user: jenkins
+  remote_user: ec2-user
   gather_facts: true
   tasks:
   - name: "Install httpd and php packages"
