@@ -12,7 +12,7 @@
         state: present
   - name: "copy code from GitHub"
     get_url:
-        url: https://raw.githubusercontent.com/shubhamm45/DevOps-Project/blob/main/DevOps_Project_2/Ansible/index.php
+        url: https://www.shubhammishra.in
         dest: "/var/www/html/index.php"
   - name: "Start httpd services"
     service:
