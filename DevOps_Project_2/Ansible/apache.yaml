@@ -5,6 +5,7 @@
   gather_facts: true
   vars:
     ansible_ssh_private_key_file: "/etc/ansible/ansible.pem"  
+    ansible_ssh_user: "ec2-user"
   tasks:
   - name: "Install httpd and php packages"
     package:
