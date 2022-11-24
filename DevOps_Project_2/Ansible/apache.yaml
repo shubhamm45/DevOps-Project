@@ -21,8 +21,12 @@
     service:
         name: httpd
         state: started
-  - name: trigger puppet agent
-    shell: |    
-      yum install -y yum-utils
-      yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-      yum -y install terraform
+  - name: Yum Install Packages
+    yum: name={{item}} state=latest
+    with_items:
+       - wget
+  - name: terraform install
+    unarchive:
+      src: https://releases.hashicorp.com/terraform/0.9.1/terraform_0.9.1_linux_amd64.zip
+      dest: /usr/bin
+      remote_src: True
