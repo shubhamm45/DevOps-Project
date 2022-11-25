@@ -15,7 +15,7 @@ data "aws_ami" "amazon-linux" {
 resource "aws_instance" "dev_machine" {
   ami = data.aws_ami.amazon-linux.id
   instance_type = "t2.micro"
-  key_name = "ansible"
+  key_name = "euran-jenkins"
 
   tags = {
     Environment = "dev"
