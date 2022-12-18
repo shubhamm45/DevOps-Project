@@ -31,7 +31,7 @@ resource "aws_security_group" "EKS_SG" {
     description      = "TLS from VPC"
     from_port        = 0
     to_port          = 0
-    protocol         = "tcp"
+    protocol         = "-1"
     cidr_blocks      = [local.workstation-external-cidr]
     
   }
