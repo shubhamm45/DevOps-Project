@@ -9,7 +9,7 @@ variable "vpc_id" {
 }   
 
 variable "cluster_name" {
-    default = "mycluster"
+    default = ""
 }
 
 variable "node_group_name" {
