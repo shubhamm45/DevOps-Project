@@ -12,9 +12,7 @@ variable "cluster_name" {
     default = ""
 }
 
-variable "node_group_name" {
-    default = ""
-}
+
 
 variable "node_instance_type" {
     default = "t2.micro"
