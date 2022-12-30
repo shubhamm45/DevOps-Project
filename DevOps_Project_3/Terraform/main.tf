@@ -78,7 +78,7 @@ resource "aws_iam_role_policy_attachment" "AmazonEKSClusterPolicy" {
 resource "aws_eks_cluster" "myeks" {
     name = var.cluster_name
     role_arn = aws_iam_role.cluster_role.arn
-
+    version = "1.24"
     vpc_config {
         
         subnet_ids = data.aws_subnet_ids.subnet_id.ids
