@@ -1,11 +1,11 @@
 variable "region" {
-    default = "ap-south-1"
+    default = ""
 }
 
 
 
 variable "vpc_id" {
-    default = "vpc-0f82fd20be060b915"
+    default = ""
 }   
 
 variable "cluster_name" {
@@ -13,7 +13,7 @@ variable "cluster_name" {
 }
 
 variable "node_group_name" {
-    default = "mynode"
+    default = ""
 }
 
 variable "node_instance_type" {
