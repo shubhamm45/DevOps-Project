@@ -10,7 +10,7 @@ export TF_VAR_cluster_name=$CLUSTER_NAME
 cd ${WORKSPACE}/DevOps_Project_3/Terraform
 
 #replacing the cluster name field in backend.tf file
-sed -i "s/cluster_name/my-cluster/g" backend.tf
+sed -i "s/cluster_name/$CLUSTER_NAME/g" backend.tf
 
 #running terraform command
 terraform init    
