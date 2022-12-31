@@ -25,11 +25,15 @@ kubectl get pods -A
 #installing bitnami helm chart
 helm repo add bitnami https://charts.bitnami.com/bitnami
 
-#installing nginx
-helm install nginx bitnami/nginx
+#installing eks helm chart
+helm repo add eks https://aws.github.io/eks-charts
 
-#installing grafana
-helm install grafana bitnami/grafana
+#installing nginx
+helm upgrade --install nginx bitnami/nginx
+
+#installing aws loadbalancer controller
+helm upgrade --install lb-controller eks/aws-load-balancer-controller --set clusterName=$CLUSTER_NAME
+
 
 else
 echo "no need to install"
