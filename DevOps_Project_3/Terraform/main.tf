@@ -135,9 +135,9 @@ resource "aws_eks_node_group" "mynode_node" {
     subnet_ids = data.aws_subnet_ids.subnet_id.ids
 
     scaling_config {
-        desired_size = 3
-        max_size = 3
-        min_size = 3
+        desired_size = 1
+        max_size = 1
+        min_size = 1
     }
 
     instance_types = [var.node_instance_type]
